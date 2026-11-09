@@ -18,3 +18,9 @@ Question: This bug would never have been found without a test. What was it, and 
 The bug was a spelling mistake in the error message. "Customer" was written as "cutomer". The function still threw an error, but the message was incorrect.
 
 This shows that testing only whether an error is thrown is not always enough. We should also test the exact error message when our own code throws an error.
+
+Exercise 3 – Testing the schemas themselves
+
+Question: Why use toEqual() and not toBe() when comparing objects?
+
+We use toEqual() because it compares the contents and properties of two objects. toBe() checks whether both values are the exact same object in memory. Since we want to check whether the objects have the same data, toEqual() is the correct choice.
